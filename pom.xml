@@ -11,6 +11,7 @@
 		<module>restdoc</module>
 		<module>springbootcache</module>
 		<module>notes</module>
+		<module>docker</module>
 	</modules>
 	<packaging>pom</packaging>
 
