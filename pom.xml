@@ -4,12 +4,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mecury</groupId>
-	<artifactId>boot</artifactId>
+	<artifactId>world</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<modules>
+		<module>introduction</module>
+		<module>restdoc</module>
+		<module>springbootcache</module>
+		<module>notes</module>
+	</modules>
+	<packaging>pom</packaging>
 
-	<name>boot</name>
-	<description>Demo project for Spring Boot</description>
+	<name>world</name>
+	<description>all world of spring</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
