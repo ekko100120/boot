@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+person:
+  name: kenny
+  age: 26
+
+data:
+  name: kenny
+  age: 26
+  number: ${random.int}
+  uuid: ${random.uuid}
+  max: ${random.int(10)}
+  value: ${random.value}
+  greeting: hi, i'm ${data.name}
+
+spring:
+  profiles:
+    active: dev
+
+account:
+  id: 100
+  name: zhazha
+  money: 100000
