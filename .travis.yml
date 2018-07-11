@@ -1,6 +1,7 @@
 language: java
 dist: trusty
 os: osx
+osx_image: xcode8
 jdk:
   - oraclejdk8
 
