@@ -12,6 +12,7 @@
 		<module>springbootcache</module>
 		<module>notes</module>
 		<module>docker</module>
+		<module>upload</module>
 	</modules>
 	<packaging>pom</packaging>
 
