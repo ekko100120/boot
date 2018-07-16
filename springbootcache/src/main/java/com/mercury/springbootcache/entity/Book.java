@@ -8,13 +8,19 @@ package com.mercury.springbootcache.entity;
  * @return:
  */
 public class Book {
+   private int id;
    private String isbn;
    private String title;
 
-   public Book(String isbn, String title) {
+   public Book() {
+   }
+
+   public Book(int id,String isbn, String title) {
+      this.id=id;
 	  this.isbn = isbn;
 	  this.title = title;
    }
+
 
    public String getIsbn() {
 	  return isbn;
@@ -22,6 +28,14 @@ public class Book {
 
    public void setIsbn(String isbn) {
 	  this.isbn = isbn;
+   }
+
+   public int getId() {
+	  return id;
+   }
+
+   public void setId(int id) {
+	  this.id = id;
    }
 
    public String getTitle() {
@@ -35,7 +49,8 @@ public class Book {
    @Override
    public String toString() {
 	  return "Book{" +
-		  "isbn='" + isbn + '\'' +
+		  "id=" + id +
+		  ", isbn='" + isbn + '\'' +
 		  ", title='" + title + '\'' +
 		  '}';
    }
