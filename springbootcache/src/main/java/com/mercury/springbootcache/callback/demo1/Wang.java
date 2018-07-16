@@ -1,4 +1,4 @@
-package com.mercury.springbootcache.callback;
+package com.mercury.springbootcache.callback.demo1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -26,14 +26,19 @@ public class Wang implements Callback {
       new Thread(new Runnable() {
 		 @Override
 		 public void run() {
-			li.executeMessage(Wang.this,question);
-		 }
+             try {
+                 li.executeMessage(Wang.this,question);
+             } catch (InterruptedException e) {
+                 e.printStackTrace();
+             }
+         }
 	  }).start();
-
+      // play（）
 	  play();
    }
 
    public void play() throws InterruptedException {
+       System.out.println("play game ing+++++++++++");
 	  TimeUnit.SECONDS.sleep(3);
    }
    @Override

@@ -39,7 +39,7 @@ public class CacheDemo {
 			 }
 		  });
 	  System.out.println(bookCache.size());
-	  for (int i = 0; i <20 ; i++) {
+	  for (int i = 0; i <5 ; i++) {
 		 Book book =bookCache.get(i);
 		 System.out.println(book);
 		 TimeUnit.SECONDS.sleep(1);
