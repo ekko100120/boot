@@ -1,9 +1,7 @@
 server:
-  port: 8889
+  port: 9999
 #  database mysql
 spring:
-  profiles:
-    active: dev
 
   thymeleaf:
     prefix: classpath:/templates/
@@ -14,7 +12,19 @@ spring:
     username: root
     password: 1001
 
-
+  # redis configuration
+  # redis connect pool 分为 Jedis和Lettuce两种
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
 
 
 
