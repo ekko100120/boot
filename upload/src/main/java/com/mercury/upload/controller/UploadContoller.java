@@ -16,8 +16,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.stream.Collectors;
 
+
 @Controller
-@RequestMapping(value = "/file")
+@RequestMapping(value = "demo")
 public class UploadContoller {
     @Autowired
     private final StorageService storageService;
@@ -26,7 +27,7 @@ public class UploadContoller {
         this.storageService=storageService;
     }
 
-    @GetMapping("")
+    @GetMapping("/")
     public String listUploeadedFiles(Model model){
         model.addAttribute("files",storageService.loadAll()
                 .map(path -> MvcUriComponentsBuilder
@@ -49,7 +50,7 @@ public class UploadContoller {
         storageService.store(file);
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
-        return  "redirect:/";
+        return  "redirect:/demo/";
     }
 
     @ExceptionHandler(StorageException.class)

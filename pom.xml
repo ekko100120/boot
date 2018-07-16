@@ -13,7 +13,8 @@
 		<module>notes</module>
 		<module>docker</module>
 		<module>upload</module>
-	</modules>
+        <module>sql</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>world</name>
