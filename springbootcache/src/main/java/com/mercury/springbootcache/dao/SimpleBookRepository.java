@@ -17,7 +17,7 @@ public class SimpleBookRepository implements  BookRepository{
    @Override
    public Book getByIsbn(String isbn) {
 	  simulateSlowService();
-	  return  new Book(isbn,"some book");
+	  return  new Book(1,isbn,"some book");
    }
 
    private void simulateSlowService() {
