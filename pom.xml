@@ -14,6 +14,7 @@
 		<module>docker</module>
 		<module>upload</module>
         <module>sql</module>
+        <module>mq</module>
     </modules>
 	<packaging>pom</packaging>
 
@@ -35,6 +36,8 @@
 	</properties>
 
 	<dependencies>
+		<!-- jackson  part start-->
+
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
@@ -45,6 +48,8 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.6</version>
 		</dependency>
+		<!-- jackson  part end-->
+		<!-- springboot  part start-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -58,20 +63,14 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>1.3.2</version>
 		</dependency>
-
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- springboot  part end-->
+
 		<!--database dependency start-->
-		<!--database dependency end  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -86,8 +85,16 @@
 			<artifactId>druid</artifactId>
 			<version>1.1.10</version>
 		</dependency>
-	</dependencies>
+		<!--database dependency end  -->
 
+		<!--lomok dependency start  -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--lomok dependency start  -->
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>

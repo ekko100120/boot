@@ -1,0 +1,30 @@
+server:
+  port: 9999
+#  database mysql
+spring:
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bank?userSSL=true&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT
+    username: root
+    password: 1001
+
+  # redis configuration
+  # redis connect pool 分为 Jedis和Lettuce两种
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+
+
+

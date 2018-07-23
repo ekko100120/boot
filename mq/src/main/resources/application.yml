@@ -1,0 +1,20 @@
+server:
+  port: 8889
+#  database mysql
+spring:
+  profiles:
+    active: dev
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bank?userSSL=true&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT
+    username: root
+    password: 1001
+
+
+
+
+
