@@ -1,4 +1,4 @@
-package com.mercury.mq.service;
+package com.mercury.mq.p2p.service;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -21,4 +21,10 @@ public class MyMessage  implements Serializable {
    @Setter
    private String text;
 
+   @Override
+   public String toString() {
+      return "MyMessage{" +
+          "text='" + text + '\'' +
+          '}';
+   }
 }

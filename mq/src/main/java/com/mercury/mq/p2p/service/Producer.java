@@ -1,4 +1,4 @@
-package com.mercury.mq.service;
+package com.mercury.mq.p2p.service;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +17,15 @@ import org.springframework.stereotype.Component;
 @Data
 @Component
 public class Producer  {
+   @Autowired
    private JmsTemplate template;
 
    @Autowired
-   @Qualifier(value = "activeMQQueue")
+   @Qualifier(value = "queue")
    private javax.jms.Destination destination;
 
    public void produce(MyMessage message){
-      template.convertAndSend((javax.jms.Destination) destination,message);
+      template.convertAndSend(destination,message);
    }
 
 }
