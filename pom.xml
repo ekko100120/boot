@@ -15,6 +15,8 @@
 		<module>upload</module>
         <module>sql</module>
         <module>mq</module>
+		<module>cache</module>
+        <module>spring</module>
     </modules>
 	<packaging>pom</packaging>
 
