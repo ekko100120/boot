@@ -1,5 +1,6 @@
 package com.mecury.boot.controller;
 
+import com.mecury.boot.controller.interceptor.AuthValidator;
 import com.mecury.boot.entity.Account;
 import com.mecury.boot.service.IAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,13 @@ public class AccountController {
    @Autowired
    IAccountService accountService;
 
+   @AuthValidator(check = true,name = "kenny")
    @RequestMapping(value = "/list",method = RequestMethod.GET)
    public List<Account> getAccounts(){
       return accountService.findAccountList();
    }
-   @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+    @AuthValidator(check = true,name = "admin")
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
    public  Account getAccountById(@PathVariable("id") int id){
 	  return accountService.findAccountById(id);
    }
